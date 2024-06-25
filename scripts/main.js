@@ -1,19 +1,13 @@
-const elements = [
-  { tag: "p", text: "Frase 1" },
-  { tag: "div", text: "Frase 2" },
-  { tag: "footer", text: "Frase 3" },
-  { tag: "section", text: "Frase 4" },
-];
+const paragrafos = document.querySelector(".paragrafos");
+const ps = paragrafos.querySelectorAll("p");
 
-const container = document.querySelector(".container");
-const div = document.createElement("div");
+const estilosBody = getComputedStyle(document.body);
+const backgroundColorBody = estilosBody.backgroundColor;
 
-for (let i = 0; i < elements.length; i++) {
-  let { tag, text } = elements[i];
-  let tagCreated = document.createElement(tag);
-
-  tagCreated.innerText = text;
-  div.appendChild(tagCreated);
+for (let p of ps) {
+  console.log(p);
+  p.setAttribute(
+    "style",
+    `background-color:${backgroundColorBody};color:white;`,
+  );
 }
-
-container.appendChild(div);

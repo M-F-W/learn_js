@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   block-size: border-box;
-  font-family: serif;
+  font-family: "Roboto", serif;
 }
 
 body {
@@ -16,4 +16,8 @@ body {
   background: #fff;
   border-radius: 5px;
   text-align: center;
+}
+
+p {
+  margin: 10px 0px;
 }
